@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
+    <script src="modalAdd.js" defer></script>
+    <script src="modalChange.js" defer></script>
+    <script src="/buttonDelete.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -47,78 +50,12 @@
                     <td class="table-name-column">
                         <p class="table-column-name">Действия</p>
                     </td>
+                    <td class="table-name-column">
+
+                    </td>
                 </tr>
             </thead>
             <tbody class="table-body">
-                <tr class="table-body-row">
-                    <td class="body-item">
-                        <p class="text1">123455</p>
-                    </td>
-                    <td class="body-item">
-                        <p class="text2">Скворец Денис Юрьевич</p>
-                    </td>
-                    <td class="body-item">
-                        <p class="text2">21.02.2021</p>
-                        <p class="time text1">14:50</p>
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/phone.svg" alt="" class="icon">
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/edit.svg" alt="" class="icon">
-                        <p class="text2">Изменить</p>
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/cancel.svg" alt="" class="icon">
-                        <p class="text2">Удалить</p>
-                    </td>
-                </tr>
-                <tr class="table-body-row">
-                    <td class="body-item">
-                        <p class="text1">123455</p>
-                    </td>
-                    <td class="body-item">
-                        <p class="text2">Скворец Денис Юрьевич</p>
-                    </td>
-                    <td class="body-item">
-                        <p class="text2">21.02.2021</p>
-                        <p class="time text1">14:50</p>
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/phone.svg" alt="" class="icon">
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/edit.svg" alt="" class="icon">
-                        <p class="text2">Изменить</p>
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/cancel.svg" alt="" class="icon">
-                        <p class="text2">Удалить</p>
-                    </td>
-                </tr>
-                <tr class="table-body-row">
-                    <td class="body-item">
-                        <p class="text1">123455</p>
-                    </td>
-                    <td class="body-item">
-                        <p class="text2">Скворец Денис Юрьевич</p>
-                    </td>
-                    <td class="body-item">
-                        <p class="text2">21.02.2021</p>
-                        <p class="time text1">14:50</p>
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/phone.svg" alt="" class="icon">
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/edit.svg" alt="" class="icon">
-                        <p class="text2">Изменить</p>
-                    </td>
-                    <td class="body-item">
-                        <img src="/Resurce/TABLE/ICON/cancel.svg" alt="" class="icon">
-                        <p class="text2">Удалить</p>
-                    </td>
-                </tr>
             </tbody>
         </table>
         <div class="main-footer">
@@ -213,48 +150,17 @@
             <div class="modal-main">
                 <div class="modal-inputes">
                     <div class="input-block">
-                        <input type="text" placeholder="Фамилия*">
+                        <input type="text" placeholder="Фамилия*" value="" id="0">
                     </div>
                     <div class="input-block">
-                        <input type="text" placeholder="Имя*">
+                        <input type="text" placeholder="Имя*" value="" id="1">
                     </div>
                     <div class="input-block">
-                        <input type="text" placeholder="Отчество">
+                        <input type="text" placeholder="Отчество" value="" id="2">
                     </div>
                 </div>
                 <div class="modal-contacts">
                     <div class="contacts">
-                        <div class="block">
-                            <div class="block-contact">
-                                <p>Телефон</p>
-                                <img src="/Resurce/MODAL/up.svg" alt="">
-                            </div>
-                            <input type="text" placeholder="Введите данные контакта">
-                            <div class="contact-cancle">
-                                <img src="/Resurce/MODAL/cancel.svg" alt="" class="contact-icon">
-                            </div>
-                        </div>
-                        <div class="block">
-                            <div class="block-contact">
-                                <p>Телефон</p>
-                                <img src="/Resurce/MODAL/up.svg" alt="">
-                            </div>
-                            <input type="text" placeholder="Введите данные контакта">
-                            <div class="contact-cancle">
-                                <img src="/Resurce/MODAL/cancel.svg" alt="" class="contact-icon">
-                            </div>
-                        </div>
-                        <div class="block">
-                            <div class="block-contact">
-                                <p>Телефон</p>
-                                <img src="/Resurce/MODAL/up.svg" alt="">
-                            </div>
-                            <input type="text" placeholder="Введите данные контакта">
-                            <div class="contact-cancle">
-                                <img src="/Resurce/MODAL/cancel.svg" alt="" class="contact-icon">
-                            </div>
-                        </div>
-                        
                     </div>
                     <div class="button-client">
                         <button class="add-client">
