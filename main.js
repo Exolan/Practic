@@ -1,29 +1,59 @@
-//ModalWindow
-const modalWindow = document.querySelector(".modal");
-const modalButton = document.querySelectorAll(".modal_button");
-const modalClose = document.querySelector(".modal_close");
+const tbody = document.querySelector("tbody");
+const clientArray = JSON.parse(localStorage.getItem("clients")) || [];
 
-for (index of modalButton) {
-  index.addEventListener("click", () => {
-    modalWindow.style.display = "flex";
+clientArray.forEach((client) => {
+  const tr = document.createElement("tr");
+  tr.className = "table-body-row";
+  tr.innerHTML = `<td class="body-item">
+                        <p class="text1">1</p>
+                    </td>
+                    <td class="body-item">
+                        <p class="text2">${client.fio}</p>
+                    </td>
+                    <td class="body-item">
+                        <p class="text2">${new Date(
+                          client.dateReg
+                        ).getDay()}.${new Date(
+    client.dateReg
+  ).getMonth()}.${new Date(client.dateReg).getFullYear()}</p>
+                        <p class="time text1">${new Date(
+                          client.dateReg
+                        ).getHours()}:${new Date(
+    client.dateReg
+  ).getMinutes()}</p>
+                    </td>
+                    <td class="body-item">
+                        <p class="text2">${new Date(
+                          client.dateChange
+                        ).getDay()}.${new Date(
+    client.dateChange
+  ).getMonth()}.${new Date(client.dateChange).getFullYear()}</p>
+                        <p class="time text1">${new Date(
+                          client.dateChange
+                        ).getHours()}:${new Date(
+    client.dateChange
+  ).getMinutes()}</p>
+                    </td>
+                    <td class="body-item">
+                        ${viewContacts(client)}
+                    </td>
+                    <td class="body-item change">
+                        <img src="/Resurce/TABLE/ICON/edit.svg" alt="" class="icon">
+                        <p class="text2">Изменить</p>
+                    </td>
+                    <td class="body-item delete">
+                        <img src="/Resurce/TABLE/ICON/cancel.svg" alt="" class="icon">
+                        <p class="text2">Удалить</p>
+                    </td>`;
+  tbody.append(tr);
+});
+
+function viewContacts(client) {
+  const arrayContacts = client.contacts;
+  console.log(client.contacts);
+  let string = "";
+  arrayContacts.forEach((contact) => {
+    string += `<img src=${contact.icon} alt="" class="icon" title=${contact.text}>`;
   });
+  return string;
 }
-modalClose.addEventListener("click", () => {
-  modalWindow.style.display = "none";
-});
-modalWindow.addEventListener("click", (e) => {
-  const isModal = e.target.closest(".modal_inner");
-
-  if (!isModal) {
-    modalWindow.style.display = "none";
-  }
-});
-
-//Timer
-const timer = document.querySelectorAll(".timer_count");
-console.log(new Date().getHours());
-setInterval(() => {
-  timer[1].textContent = parseInt(new Date().getHours());
-  timer[2].textContent = parseInt(new Date().getMinutes());
-  timer[3].textContent = parseInt(new Date().getSeconds());
-});

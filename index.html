@@ -1,234 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
+    <script src="modalAdd.js" defer></script>
+    <script src="modalChange.js" defer></script>
+    <script src="/buttonDelete.js" defer></script>
   </head>
-  <body class="body">
+  <body>
     <header class="header">
-      <div class="header_info">
-        <a href="" class="header_logo">
-          <img class="logo" src="Resurse/Header/logo.svg" alt="" />
-        </a>
-        <div class="header_menu">
-          <nav class="header_nav">
-            <a href="">Чем занимаемся</a>
-            <a href="">Процесс работы</a>
-            <a href="">Команда</a>
-          </nav>
-          <button class="zayavka modal_button">Оставить заявку</button>
+      <div class="header-content">
+        <div class="header-logo">
+          <img src="/Resurce/HEADER/logo.svg" alt="" />
         </div>
+        <input type="text" class="header-input" placeholder="Введите запрос" />
       </div>
     </header>
     <main class="main">
-      <section class="main_display">
-        <div class="main_conteiner">
-          <h1 class="main_display_head">Собираем игровой ПК под ваш бюджет</h1>
-          <div class="main_display_timer">
-            <div class="timer_item">
-              <div class="timer_count">18</div>
-              <div class="timer_text">Дней</div>
-            </div>
-            <div class="timer_item">
-              <div class="timer_count">18</div>
-              <div class="timer_text">Часов</div>
-            </div>
-            <div class="timer_item">
-              <div class="timer_count">18</div>
-              <div class="timer_text">Минут</div>
-            </div>
-            <div class="timer_item">
-              <div class="timer_count">18</div>
-              <div class="timer_text">Секунд</div>
-            </div>
-          </div>
-          <button class="button modal_button">Оставить заявку</button>
-        </div>
-        <div class="main_display_bg">
-          <img src="Resurse/Back/main-screen__bgc.jpg" alt="" />
-        </div>
-      </section>
-
-      <section class="about">
-        <div class="conteiner">
-          <div class="about_info">
-            <div class="about_img">
-              <img src="Resurse/About/about__img.svg" alt="" />
-            </div>
-            <div class="about_text">
-              <h2 class="about_header">Чем мы занимаемся</h2>
-              <p class="about_desc">
-                Помогаем сэкономить до 40% стоимости игрового компьютера без
-                потери производительности. Подбираем мощные детали компьютера,
-                заказываем у своих поставщиков или напрямую у производителей,
-                чтобы сэкономить ваши деньги. Собираем мощный компьютер, на
-                котором можно играть в любые современные игры и заниматься
-                работой.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="process">
-        <div class="conteiner">
-          <div class="proces_info">
-            <div class="process_title">
-              <div class="process_img">
-                <img src="Resurse/Icon/icon-heading.svg" alt="" />
-              </div>
-              <h2 class="process_header">Процесс работы</h2>
-            </div>
-            <p class="process_desc">
-              Подробно рассказываем о том, как происходит сборка, от заявки до
-              выдачи вашего заказа
-            </p>
-            <div class="process_columns">
-              <div class="process_item">
-                <h3 class="process_work">Заявка</h3>
-                <div class="rect"></div>
-                <p class="process_text">
-                  Мы получаем вашу заявку, связываемся с вами для уточнения
-                  деталей, чтобы понять ваши ожидания от будущего компьютера.
-                </p>
-              </div>
-              <div class="process_item">
-                <h3 class="process_work">Подбор</h3>
-                <div class="rect1"></div>
-                <p class="process_text">
-                  После оплаты подбираем комплектующие, которые дадут
-                  максимальную производительность. Заказываем их напрямую у
-                  поставщиков.
-                </p>
-              </div>
-              <div class="process_item">
-                <h3 class="process_work">Сборка</h3>
-                <div class="rect2"></div>
-                <p class="process_text">
-                  Собираем компьютер, проводим стартовую диагностику,
-                  устанавливаем операционную систему и необходимые драйверы для
-                  работы.
-                </p>
-              </div>
-              <div class="process_item">
-                <h3 class="process_work">Выдача</h3>
-                <div class="rect3"></div>
-                <p class="process_text">
-                  Отдаём компьютер вам в назначенный срок, проводим вместе
-                  тестирование, подписываем документы о выполнении работы и
-                  гарантии.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="team">
-        <div class="conteiner">
-          <div class="team_title">
-            <div class="team_img">
-              <img
-                class="team_svg"
-                src="Resurse/Icon/icon-heading2.svg"
-                alt=""
-              />
-            </div>
-            <h4 class="team_header">Наша команда</h4>
-          </div>
-          <div class="team_columns">
-            <div class="team_item">
-              <div class="man_img">
-                <img src="Resurse/Teachers/Ellipse 2 (2).png" alt="" />
-              </div>
-              <h4 class="team_name">Евгений Петров</h4>
-              <h4 class="team_disc">Специалист по видеокартам</h4>
-              <button class="team_button">Биография</button>
-            </div>
-            <div class="team_item">
-              <div class="man_img">
-                <img src="Resurse/Teachers/Ellipse 2 (1).png" alt="" />
-              </div>
-              <h4 class="team_name">Алексей Козлов</h4>
-              <h4 class="team_disc">Специалист по видеокартам</h4>
-              <button class="team_button">Биография</button>
-            </div>
-            <div class="team_item">
-              <div class="man_img">
-                <img src="Resurse/Teachers/Ellipse 2.png" alt="" />
-              </div>
-              <h4 class="team_name">Дмитрий Иванов</h4>
-              <h4 class="team_disc">Специалист по видеокартам</h4>
-              <button class="team_button">Биография</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <div class="conteiner">
-          <h5 class="footer_title">Закажите свою уникальную сборку</h5>
-          <h5 class="footer_disc">
-            Мы свяжемся с вами, чтобы уточнить детали заказа
-          </h5>
-          <button class="footer_button modal_button">Оставить заявку</button>
-          <div class="footer_sites">
-            <div class="footer_site">
-              <img class="footer_img" src="Resurse/Icon/vk.svg" alt="" />
-            </div>
-            <div class="footer_site">
-              <img class="footer_img" src="Resurse/Icon/youtube.svg" alt="" />
-            </div>
-            <div class="footer_site">
-              <img class="footer_img" src="Resurse/Icon/facebook.svg" alt="" />
-            </div>
-            <div class="footer_site">
-              <img class="footer_img" src="Resurse/Icon/instagram.svg" alt="" />
-            </div>
-          </div>
-        </div>
-      </footer>
-    </main>
-    <form class="modal" action="#">
-      <div class="modal_inner">
-        <div class="modal_close">
-          <img src="Resurse/Modal/cross-svgrepo-com.svg" alt="" />
-        </div>
-        <h3 class="modal_header">Заявка на сборку ПК</h3>
-        <div class="modal-header_text">
-          Мы свяжемся с вами, чтобы обсудить детали заказа
-        </div>
-        <div class="modal_elements">
-          <div class="modal_item">
-            <input
-              type="text"
-              class="modal_input"
-              placeholder="Как вас зовут"
-            />
-          </div>
-          <div class="modal_item">
-            <input
-              type="tel"
-              class="modal_input"
-              placeholder="Номер телефона"
-            />
-          </div>
-          <div class="modal_item">
-            <input type="email" class="modal_input" placeholder="E-mail" />
-          </div>
-        </div>
-        <button type="submit" class="button footer_button">Отправить</button>
+      <div class="main-header">
+        <h1 class="main-header-text">Клиенты</h1>
       </div>
-    </form>
+        <table class="main-table">
+            <thead class="table-header">
+                <tr class="table-header-row">
+                    <td class="table-name-column">
+                        <p class="table-column-name sort">ID</p>
+                        <img src="Resurce/TABLE/ICON/UP.svg" alt="" />
+                    </td>
+                    <td class="table-name-column">
+                        <p class="table-column-name">Фамилия Имя Отчество</p>
+                        <img src="Resurce/TABLE/ICON/DOWN.svg" alt="" />
+                        <p class="table-sort">A-Я</p>
+                    </td>
+                    <td class="table-name-column">
+                        <p class="table-column-name">Дата и время создания</p>
+                        <img src="Resurce/TABLE/ICON/DOWN.svg" alt="" />
+                    </td>
+                    <td class="table-name-column">
+                        <p class="table-column-name">Последние изменения</p>
+                        <img src="Resurce/TABLE/ICON/DOWN.svg" alt="" />
+                    </td>
+                    <td class="table-name-column">
+                        <p class="table-column-name">Контакты</p>
+                    </td>
+                    <td class="table-name-column">
+                        <p class="table-column-name">Действия</p>
+                    </td>
+                    <td class="table-name-column">
+
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+            </tbody>
+        </table>
+        <div class="main-footer">
+                <button class="footer-button">
+                    <img src="/Resurce/TABLE/FOOTER/footer.svg" alt="">
+                    <p>Добавить клиента</p>
+                </button>
+            </div>
+      </div>
+    </main>
+    <div class="modal-change modal">
+        <div class="modal-conteiner">
+            <div class="modal-header">
+                <h1 class="modal-name">Изменить данные</h1>
+                <p class="modal-text">ID: 123455</p>
+            </div>
+            <div class="modal-close">
+                <img src="/Resurce/MODAL/Union.svg" alt="">
+            </div>
+            <div class="modal-main">
+                <div class="modal-inputes">
+                    <div class="input-block">
+                        <p class="input-name">Фамилия<span class="star">*</span></p>
+                        <input type="text">
+                    </div>
+                    <div class="input-block">
+                        <p class="input-name">Имя<span class="star">*</span></p>
+                        <input type="text">
+                    </div>
+                    <div class="input-block">
+                        <p class="input-name">Отчество</p>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="modal-contacts">
+                    <div class="contacts">
+
+                    </div>
+                    <div class="button-client">
+                        <button class="add-client">
+                            <img src="/Resurce/MODAL/add_circle_outline.svg" alt="">
+                            <p class="button-text">Добавить контакт</p>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="save-client">Сохранить</button>
+                <button class="delete-client">Удалить клиента</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-add modal">
+        <div class="modal-conteiner">
+            <div class="modal-header">
+                <h1 class="modal-name">Новый клиент</h1>
+            </div>
+            <div class="modal-close">
+                <img src="/Resurce/MODAL/Union.svg" alt="">
+            </div>
+            <div class="modal-main">
+                <div class="modal-inputes">
+                    <div class="input-block">
+                        <input type="text" placeholder="Фамилия*" value="" id="0">
+                    </div>
+                    <div class="input-block">
+                        <input type="text" placeholder="Имя*" value="" id="1">
+                    </div>
+                    <div class="input-block">
+                        <input type="text" placeholder="Отчество" value="" id="2">
+                    </div>
+                </div>
+                <div class="modal-contacts">
+                    <div class="contacts">
+                    </div>
+                    <div class="button-client">
+                        <button class="add-client">
+                            <img src="/Resurce/MODAL/add_circle_outline.svg" alt="">
+                            <p class="button-text">Добавить контакт</p>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="save-client">Сохранить</button>
+                <button class="delete-client">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-delete modal">
+        <div class="modal-conteiner">
+            <div class="modal-header">
+            <h1 class="modal-name">Удалить клиента</h1>
+        </div>
+        <div class="modal-close">
+            <img src="/Resurce/MODAL/Union.svg" alt="">
+        </div>
+        <div class="modal-main">
+            <p class="modal-info">Вы действительно хотите удалить данного клиента?
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button class="save-client del">Удалить</button>
+            <button class="delete-client cancle">Отмена</button>
+        </div>
+        </div>
+        
+    </div>
   </body>
 </html>
