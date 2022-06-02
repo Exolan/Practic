@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
-    <script src="modalAdd.js" defer></script>
-    <script src="modalChange.js" defer></script>
-    <script src="/buttonDelete.js" defer></script>
+    <script src="main.js" type="module" defer></script>
+    <script src="modalAdd.js" type='module' defer></script>
+    <!-- <script src="modalChange.js" defer></script>
+    <script src="/buttonDelete.js" defer></script> -->
+    <script src="/sort.js" type='module' defer></script>
+    <script src="/filter.js" type="module" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -27,20 +32,20 @@
         <table class="main-table">
             <thead class="table-header">
                 <tr class="table-header-row">
-                    <td class="table-name-column">
-                        <p class="table-column-name sort">ID</p>
+                    <td class="table-name-column id">
+                        <p class="table-column-name sort ">ID</p>
                         <img src="Resurce/TABLE/ICON/UP.svg" alt="" />
                     </td>
-                    <td class="table-name-column">
+                    <td class="table-name-column fio">
                         <p class="table-column-name">Фамилия Имя Отчество</p>
                         <img src="Resurce/TABLE/ICON/DOWN.svg" alt="" />
                         <p class="table-sort">A-Я</p>
                     </td>
-                    <td class="table-name-column">
+                    <td class="table-name-column dateReg">
                         <p class="table-column-name">Дата и время создания</p>
                         <img src="Resurce/TABLE/ICON/DOWN.svg" alt="" />
                     </td>
-                    <td class="table-name-column">
+                    <td class="table-name-column dateChange">
                         <p class="table-column-name">Последние изменения</p>
                         <img src="Resurce/TABLE/ICON/DOWN.svg" alt="" />
                     </td>
@@ -70,7 +75,7 @@
         <div class="modal-conteiner">
             <div class="modal-header">
                 <h1 class="modal-name">Изменить данные</h1>
-                <p class="modal-text">ID: 123455</p>
+                <p class="modal-text"></p>
             </div>
             <div class="modal-close">
                 <img src="/Resurce/MODAL/Union.svg" alt="">
@@ -92,7 +97,6 @@
                 </div>
                 <div class="modal-contacts">
                     <div class="contacts">
-
                     </div>
                     <div class="button-client">
                         <button class="add-client">
